@@ -6,15 +6,25 @@ import { useChat } from 'ai/react';
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   const [showLabel, setShowLabel] = useState(true);
+  const [showTitle, setShowTitle] = useState(true);
 
   const handleEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       setShowLabel(false);
+      setShowTitle(false);
     }
   };
 
   return (
-    <div className="mx-auto w-full max-w-md py-24 flex flex-col stretch">
+    <div className="mx-auto w-full max-w-md py-24 flex flex-col items-center">
+      <h1
+        className={`text-2xl font-bold mb-4 transition-opacity duration-500 ease-in-out ${
+          showTitle ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        Mixtral MoE Chat
+      </h1>
+
       {messages.map((m) => (
         <div key={m.id}>
           {m.role === 'user' ? 'User: ' : 'AI: '}
