@@ -7,7 +7,7 @@ export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   const [showLabel, setShowLabel] = useState(true);
 
-  const handleEnterPress = (e) => {
+  const handleEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       setShowLabel(false);
     }
