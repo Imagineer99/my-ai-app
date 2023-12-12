@@ -1,601 +1,462 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 242, 244, 247;
-  --background-end-rgb: 255, 255, 255;
+ @tailwind components;
+ @tailwind utilities;
+ :root {
+     --foreground-rgb: 0, 0, 0;
+     --background-start-rgb: 242, 244, 247;
+     --background-end-rgb: 255, 255, 255;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+ @media (prefers-color-scheme: dark) {
+     :root {
+         --foreground-rgb: 255, 255, 255;
+         --background-start-rgb: 0, 0, 0;
+         --background-end-rgb: 0, 0, 0;
+    }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ body {
+     color: rgb(var(--foreground-rgb));
+     background: linear-gradient( to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)) );
+     margin: 0;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
-
-
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
+ label {
+     display: block;
+     margin-bottom: 0.5rem;
 }
-
-input {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-  box-sizing: border-box;
+ input {
+     width: 100%;
+     padding: 0.5rem;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     margin-bottom: 0.5rem;
+     box-sizing: border-box;
 }
-
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 0.5rem 1rem;
-  display:none; 
-  border: none;
-  border-radius: 1px;
-  cursor: pointer;
+ button {
+     background-color: #4caf50;
+     color: white;
+     padding: 0.5rem 1rem;
+     display:none;
+     border: none;
+     border-radius: 1px;
+     cursor: pointer;
 }
-
-button:hover {
-  background-color: #45a049;
+ button:hover {
+     background-color: #45a049;
 }
-
-
-.rounded {
-  align-self: center;
-  border-radius: 0.575rem !important;
-  display: flex;
-  font-family: unset !important;
-  outline: 0.1px solid #6b7593;
-  transition: outline 0.3s ease; /* Add smooth transition for the outline */
-  min-width: 500px !important;
-
+ .rounded {
+     align-self: center;
+     border-radius: 0.575rem !important;
+     display: flex;
+     font-family: unset !important;
+     outline: 0.1px solid #6b759370;
+     transition: outline 0.3s ease;
+    /* Add smooth transition for the outline */
+     min-width: 500px !important;
 }
-
 /* Apply styles only when .rounded is hovered */
-.rounded:hover {
-  outline: 0.1px solid #0a1e6df2;
+ .rounded:hover {
+     outline: 0.1px solid #0a1e6df2;
 }
-
 /* Exclude styles for .rounded when it is focused/selected */
-.rounded:focus {
-  outline: 0.1px solid #0a1e6df2;
+ .rounded:focus {
+     outline: 0.1px solid #c92788d7;
 }
-
-
-label {
-  display: flex;
-  margin-bottom: 0.5rem;
- 
+ label {
+     display: flex;
+     margin-bottom: 0.5rem;
 }
-
-.mx-auto form label {
-  /* Your specific styling for the "Say something..." text */
- 
-  color: rgba(141, 141, 185, 0.815);
-  /* Add any other styles you want to apply */
-
-  /* Center the label using flexbox */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Ensure the label takes the full height of its parent */
+ .mx-auto form label {
+    /* Your specific styling for the "Say something..." text */
+     color: rgba(141, 141, 185, 0.815);
+    /* Add any other styles you want to apply */
+    /* Center the label using flexbox */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+    /* Ensure the label takes the full height of its parent */
 }
-
-
-
-
-div {
-  
-  align-self: flex;
-  font-weight: 300!important;
+ div {
+     align-self: flex;
+     font-weight: 500!important;
 }
-
-.mx-auto {
-  margin-left: auto;
-  margin-top: 130px;
-  margin-right: auto;
-  margin-bottom: 500px;
-  
+ .mx-auto {
+     margin-left: auto;
+     margin-top: 130px;
+     margin-right: auto;
+     margin-bottom: 500px;
 }
-
-
-h2 {
-  margin-bottom: 15px;
-  font-family: inherit;
+ h2 {
+     margin-bottom: 15px;
+     font-family: inherit;
 }
-
-h1 {
-  margin-top: 150px;
-  color: #a0451a !important;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #778ccd !important;
-
+ h1 {
+     margin-top: 150px;
+     color: #a0451a !important;
+     opacity: 1;
+     transition: opacity 0.5s ease-in-out;
+     font-size: 2rem;
+     font-weight: bold;
+     color: #778ccd !important;
 }
-
-
-
-
-body {
-  background: linear-gradient(to right, 
-    hsl(240, 7%, 87%), 
-    hsl(240, 5%, 91%), 
-    hsl(240, 10%, 95%)
-  );
-  color: hsl(240, 4%, 32%);
+ body {
+     background: linear-gradient(to right, hsl(240, 7%, 87%), hsl(240, 5%, 91%), hsl(240, 10%, 95%) );
+     color: hsl(240, 4%, 32%);
 }
-
-.form-container {
-  max-width: 500px !important;
-  margin: 50px auto !important;
-  padding: 30px !important; 
-  border-radius: 10px !important;
-  background: rgba(255,255,255,0.1) !important;
-  backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(255,255,255,0.25) !important;
-  box-shadow: 0 20px 30px rgba(0,0,0,0.15) !important;
+ .form-container {
+     max-width: 500px !important;
+     margin: 50px auto !important;
+     padding: 30px !important;
+     border-radius: 10px !important;
+     background: rgba(255,255,255,0.1) !important;
+     backdrop-filter: blur(10px) !important;
+     border: 1px solid rgba(255,255,255,0.25) !important;
+     box-shadow: 0 20px 30px rgba(0,0,0,0.15) !important;
 }
-
-label {
-  color: #bbb !important;
-  font-weight: bold !important;
-  letter-spacing: 0.5px !important;
+ label {
+     color: #bbb !important;
+     font-weight: bold !important;
+     letter-spacing: 0.5px !important;
 }
-
-input, button {
-  background: rgb(233 233 233 / 91%) !important;
-  padding: 10px 16px !important; 
-  border-radius: 5px !important;
-  border: none !important;
-  font-size: 15px !important;
-  color: #222121de !important;  
-  font-style: none!important;
+ input, button {
+     background: rgb(233 233 233 / 91%) !important;
+     padding: 10px 16px !important;
+     border-radius: 5px !important;
+     border: none !important;
+     font-size: 15px !important;
+     color: #6b6666de !important;
+     font-style: none!important;
+     background: rgb(0 0 0 / 0%) !important;
 }
-
-button {
-  background: #a0451a !important;
-  margin-top: 20px !important;
-  cursor: pointer !important; 
-
+ button {
+     background: #a0451a !important;
+     margin-top: 20px !important;
+     cursor: pointer !important;
 }
-
-button:hover {
-  background: #a85c15 !important; 
+ button:hover {
+     background: #a85c15 !important;
 }
-
-h1, h2 {
-  text-align: center !important;
-  color: #fff !important;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.2) !important;  
+ h1, h2 {
+     text-align: center !important;
+     color: #fff !important;
+     text-shadow: 2px 2px 10px rgba(0,0,0,0.2) !important;
 }
-
-h1 {
-  font-size: 42px !important;
-  padding-top: 0px!important;
-  padding-right: 5px!important;
-  font-weight: 300!important;
+ h1 {
+     font-size: 42px !important;
+     padding-top: 0px!important;
+     padding-right: 5px!important;
+     font-weight: 300!important;
 }
-
-h1, h2 {
-  text-align: center !important;
-  color: #778ccd !important;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.2) !important;
+ h1, h2 {
+     text-align: center !important;
+     color: #778ccd !important;
+     text-shadow: 2px 2px 10px rgba(0,0,0,0.2) !important;
 }
-
-
-  /* Navbar styles */
-  nav {
-    background-color: #f5f5f5;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    width: 99.1vw;
-  }
-
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
-
-
-
-  nav {
-
-    
-    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+/* Navbar styles */
+ nav {
+     background-color: #f5f5f5;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     padding: 10px;
+     width: 99.1vw;
 }
-
-nav {
-    background: linear-gradient(45deg, rgba(24, 24, 24, 0.9), rgba(51, 51, 51, 0.9)) !important;
-  
+ .container {
+     max-width: 960px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
 }
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  min-width: 0px !important;
-  outline: 0.1px solid #c92788;
-  background-color: #0000005c;
-  margin-bottom: 16px;
-
+ .logo {
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: #333;
 }
-
-.py-2:hover {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  min-width: 0px !important;
-  outline: 0.1px solid #c59a0b;
-  background-color: #0000005c;
+ nav {
+     transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
-
-nav {
-  background: #fff;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 15px 20px;
-  border-radius: 0px!important;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;  
-  padding: 0rem!important; 
+ nav {
+     background: linear-gradient(45deg, rgba(24, 24, 24, 0.9), rgba(51, 51, 51, 0.9)) !important;
 }
-
-nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
+ .py-2 {
+     padding-top: 0.5rem;
+     padding-bottom: 0.5rem;
+     min-width: 0px !important;
+     outline: 0.1px solid #c92788;
+     background-color: #0000005c;
+     margin-bottom: 16px;
 }
-
-nav .logo {
-  font-size: 22px;
-  font-weight: 700; 
-  text-transform: uppercase;
-  letter-spacing: 1px;
+ .py-2:hover {
+     padding-top: 0.5rem;
+     padding-bottom: 0.5rem;
+     min-width: 0px !important;
+     outline: 0.1px solid #c59a0b;
+     background-color: #0000005c;
 }
-
-nav .menu {
-  display: flex;
-  list-style: none;  
+ nav {
+     background: #fff;
+     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+     padding: 15px 20px;
+     border-radius: 0px!important;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 999;
+     padding: 0rem!important;
 }
-
-nav .menu li {
-  margin: 0 15px;
+ nav .container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 1100px;
+     margin: 0 auto;
 }
-
-nav .menu a {
-  font-size: 16px;
-  color: #414141;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 5px 0;
-  transition: color .2s ease;  
+ nav .logo {
+     font-size: 22px;
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 1px;
 }
-
-nav .menu a.active {
-  color: #088178;
+ nav .menu {
+     display: flex;
+     list-style: none;
 }
-
-nav .menu a:hover {
-  color: #088178; 
+ nav .menu li {
+     margin: 0 15px;
 }
-
-nav button {
-  background: #088178;
-  color: #fff;
-  border: none;
-  padding: 7px 16px;
- 
-  font-size: 16px;
-  cursor: pointer; 
-  transition: all .2s ease;
+ nav .menu a {
+     font-size: 16px;
+     color: #999494;
+     text-decoration: none;
+     font-weight: 500;
+     padding: 5px 0;
+     transition: color .2s ease;
 }
-
-nav button:hover {
-  background: #075e54;
+ nav .menu a.active {
+     color: #088178;
 }
-
-
-nav {
-  background: rgba(30, 30, 30, 0.75) !important; 
-  border: 1px solid rgba(255, 255, 255, 0.10) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25) !important;  
+ nav .menu a:hover {
+     color: #088178;
 }
-
-nav .menu a {
-  color: rgb(200, 200, 205) !important;
+ nav button {
+     background: #088178;
+     color: #fff;
+     border: none;
+     padding: 7px 16px;
+     font-size: 16px;
+     cursor: pointer;
+     transition: all .2s ease;
 }
-
-nav button {
-  background: linear-gradient(45deg, 
-    rgba(80, 80, 90, 0.75),
-    rgba(100, 100, 110, 0.75)) !important;   
+ nav button:hover {
+     background: #075e54;
 }
-
-nav {
-  background: linear-gradient(45deg, rgba(5, 5, 5, 0.9), rgba(51, 51, 51, 0.9));
-  color: #fdfdfd;
-  text-align: center;
-  padding: 20px 0;
-  
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  transition: background 0.3s ease-in-out;
+ nav {
+     background: rgba(30, 30, 30, 0.75) !important;
+     border: 1px solid rgba(255, 255, 255, 0.10) !important;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25) !important;
 }
-
-nav a {
-  color: #fdfdfd; 
+ nav .menu a {
+     color: rgb(200, 200, 205) !important;
 }
-
-nav button {
-  background: linear-gradient(45deg, rgba(100, 100, 100, 0.9), rgba(130, 130, 130, 0.9));
-  color: #fdfdfd; 
-  border: none;
-  padding: 7px 16px;
-  cursor: pointer;
-  transition: all .2s ease;  
+ nav button {
+     background: linear-gradient(45deg, rgba(80, 80, 90, 0.75), rgba(100, 100, 110, 0.75)) !important;
 }
-
-nav button:hover {
-  background: linear-gradient(45deg, rgba(80, 80, 80, 0.9), rgba(100, 100, 100, 0.9));
+ nav {
+     background: linear-gradient(45deg, rgba(5, 5, 5, 0.9), rgba(51, 51, 51, 0.9));
+     color: #fdfdfd;
+     text-align: center;
+     padding: 20px 0;
+     border-radius: 10px;
+     border: 1px solid rgba(255, 255, 255, 0.18);
+     transition: background 0.3s ease-in-out;
 }
-
-
-nav {
-  background: #040507b9 !important;  
-  backdrop-filter: blur(5px);
-  
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  
-  padding: 20px 0;
-  color: #fff;  
-  text-shadow: 0 0 10px rgb(0 0 0);
+ nav a {
+     color: #fdfdfd;
 }
-nav a {
-  color: #fff;
-  text-decoration: none;  
+ nav button {
+     background: linear-gradient(45deg, rgba(100, 100, 100, 0.9), rgba(130, 130, 130, 0.9));
+     color: #fdfdfd;
+     border: none;
+     padding: 7px 16px;
+     cursor: pointer;
+     transition: all .2s ease;
 }
-
-nav button {
-  background: rgba(255, 255, 255, 0.3);
-  color: #fff;
-  border: none;
-  
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);  
+ nav button:hover {
+     background: linear-gradient(45deg, rgba(80, 80, 80, 0.9), rgba(100, 100, 100, 0.9));
 }
-
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  margin-left: 20px;
+ nav {
+     background: #040507b9 !important;
+     backdrop-filter: blur(5px);
+     border-radius: 10px;
+     border: 1px solid rgba(255, 255, 255, 0.5);
+     padding: 20px 0;
+     color: #fff;
+     text-shadow: 0 0 10px rgb(0 0 0);
 }
-
-.text-lg {
-  font-size: 1.525rem;
-
+ nav a {
+     color: #fff;
+     text-decoration: none;
 }
-.py-2 {
-margin-right: 20px;
-color: #ffffffbe;
+ nav button {
+     background: rgba(255, 255, 255, 0.3);
+     color: #fff;
+     border: none;
+     box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
-
-.py-2::selection {
-  margin-right: 20px;
-  color: #ffffff;
-  transition: color 0.3s ease;
-  transition: border 0.3s ease;
-  }
-
-
-.py-2:hover {
-  margin-right: 20px;
-  color: #ffffff;
-  transition: color 1.0s ease!important;
-  transition: border 0.5s ease;
-  }
-
-  
-
-  .py-2:focus {
-
-    outline: 0.1px solid #c59a0b!important;
-
-    }
-  
-
-    .py-2 {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      min-width: 0px !important;
-      outline: 0.1px solid #c92788;
-      background-color: #0000005c;
-      margin-bottom: 16px;
-      transition: outline-color 0.3s ease; /* Adjust the duration and timing function as needed */
-    }
-    
-    .py-2:hover {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      min-width: 0px !important;
-      outline: 0.1px solid #c59a0b;
-      background-color: #0000005c;
-      transition: outline-color 0.3s ease; /* Adjust the duration and timing function as needed */
-    }
-    
-
-
-    nav {
-      background: linear-gradient( 45deg, rgba(5, 5, 5, 0.966), rgba(51, 51, 51, 0.9) ) !important;
-      
-      backdrop-filter: blur(5px);
-      
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.5);
-      
-      padding: 20px 0;
-      color: #fff;
-      text-shadow: 0 0 10px rgba(27, 22, 22, 0.5);
-      
-    }
-    
-    nav a {
-      color: #fff;
-    }
-    
-    nav button {
-      background: linear-gradient(
-        to right,
-        rgba(255,255,255,0.3), 
-        rgba(255,255,255,0.6));
-        
-      color: #fff;
-      border: none;
-      
-      box-shadow: 0 0 20px rgba(255,255,255,0.7);
-    }
-
-
-
-    /* Reset some default styles for better consistency */
-body,
-h1,
-h2,
-p,
-a {
-  margin: 0;
-  padding: 0;
-  
+ .text-white {
+     --tw-text-opacity: 1;
+     color: rgb(255 255 255 / var(--tw-text-opacity));
+     margin-left: 20px;
 }
-
-
-
-
-
-.content {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;
-  background: none !important;
-  color: #1f1c1c; 
+ .text-lg {
+     font-size: 1.525rem;
 }
-
+ .py-2 {
+     margin-right: 20px;
+     color: #ffffffbe;
+}
+ .py-2::selection {
+     margin-right: 20px;
+     color: #ffffff;
+     transition: color 0.3s ease;
+     transition: border 0.3s ease;
+}
+ .py-2:hover {
+     margin-right: 20px;
+     color: #ffffff;
+     transition: color 1.0s ease!important;
+     transition: border 0.5s ease;
+}
+ .py-2:focus {
+     outline: 0.1px solid #c59a0b!important;
+}
+ .py-2 {
+     padding-top: 0.5rem;
+     padding-bottom: 0.5rem;
+     min-width: 0px !important;
+     outline: 0.1px solid #c92788;
+     background-color: #0000005c;
+     margin-bottom: 16px;
+     transition: outline-color 0.3s ease;
+    /* Adjust the duration and timing function as needed */
+}
+ .py-2:hover {
+     padding-top: 0.5rem;
+     padding-bottom: 0.5rem;
+     min-width: 0px !important;
+     outline: 0.1px solid #c59a0b;
+     background-color: #0000005c;
+     transition: outline-color 0.3s ease;
+    /* Adjust the duration and timing function as needed */
+}
+ nav {
+     background: linear-gradient( 45deg, rgba(5, 5, 5, 0.966), rgba(51, 51, 51, 0.9) ) !important;
+     backdrop-filter: blur(5px);
+     border-radius: 10px;
+     border: 1px solid rgba(255,255,255,0.5);
+     padding: 20px 0;
+     color: #fff;
+     text-shadow: 0 0 10px rgba(27, 22, 22, 0.5);
+}
+ nav a {
+     color: #fff;
+}
+ nav button {
+     background: linear-gradient( to right, rgba(255,255,255,0.3), rgba(255,255,255,0.6));
+     color: #fff;
+     border: none;
+     box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+/* Reset some default styles for better consistency */
+ body, h1, h2, p, a {
+     margin: 0;
+     padding: 0;
+}
+ .content {
+     max-width: 800px;
+     margin: 20px auto;
+     padding: 0 20px;
+     background: none !important;
+     color: #1f1c1c;
+}
 /* Navbar */
-.bg-gray-800 {
-  background-color: #333333; 
+ .bg-gray-800 {
+     background-color: #333333;
 }
-
 /* Chat box */
-.mx-auto {
-  margin: 0 auto;  
+ .mx-auto {
+     margin: 0 auto;
 }
-
-.max-w-md {
-  max-width: 768px;
+ .max-w-md {
+     max-width: 768px;
 }
-
-.py-24 {
-  padding: 6rem 0; 
-}  
-
-.shadow-xl {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+ .py-24 {
+     padding: 6rem 0;
 }
-
-.fixed {
-  position: fixed;
+ .shadow-xl {
+     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-
-.bottom-0 {
-  bottom: 0; 
+ .fixed {
+     position: fixed;
 }
-
-.border {
-  border: 1px solid #e2e8f0;  
-} 
-
-.border-gray-300 {
-  border-color: #e2e8f0;  
+ .bottom-0 {
+     bottom: 0;
 }
-
-.rounded {
-  border-radius: 0.25rem;
-  
+ .border {
+     border: 1px solid #e2e8f0;
 }
-
-.mb-8 {
-  margin-bottom: 2rem;
-  
+ .border-gray-300 {
+     border-color: #e2e8f0;
 }
-
-.mb-8:hover {
-  margin-bottom: 2rem;
-  outline: 0.1px solid #c927889f;
+ .rounded {
+     border-radius: 0.25rem;
+}
+ .mb-8 {
+     margin-bottom: 2rem;
+     color: #bbb !important;
+}
+ .mb-8:hover {
+     margin-bottom: 2rem;
+     outline: 0.1px solid #c927889f;
 }
 /* Responsiveness */
-@media screen and (max-width: 600px) {
-   /* Styles here */
+ @media screen and (max-width: 600px) {
+    /* Styles here */
 }
-
-
-
-body {
-  background: linear-gradient(
-    45deg,
-    hsl(240, 4%, 10%),
-    hsl(240, 4%, 11%),
-    hsl(240, 4%, 12%)
-  ) !important;
-  color: hsl(240, 3%, 63%);
+ body {
+     background: linear-gradient( 45deg, hsl(240, 4%, 10%), hsl(240, 4%, 11%), hsl(240, 4%, 12%) ) !important;
+     color: hsl(240, 3%, 63%);
 }
-
-
-.py-24 {
-
-  margin-bottom: 70px;
+ .py-24 {
+     margin-bottom: 70px;
 }
-
-
-h1 {
-  color: #fd6f00 !important;
+ h1 {
+     color: #fd6f00 !important;
 }
-@media only screen and (max-width: 600px) {
-  .mb-8 {
-  max-width: 50vw;
-  }
+ @media only screen and (max-width: 600px) {
+     .mb-8 {
+         width: 10px!important;
+    }
 }
-
-
+/* Adjust the margins to reduce space between items */
+ nav .container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 800px!important;
+     margin: 0 auto;
+}
+/* Reduce space to the right of the logo */
+ nav .container a.text-white {
+     margin-right: 10px;
+    /* Adjust the value as needed */
+}
+/* Reduce space to the left of the Donate button */
+ nav .container a.bg-blue-500 {
+     margin-left: 10px;
+    /* Adjust the value as needed */
+}
+ 
