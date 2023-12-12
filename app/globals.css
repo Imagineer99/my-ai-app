@@ -160,11 +160,13 @@
      background-color: #f5f5f5;
      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
      padding: 10px;
+     
      width: 99.1vw;
 }
  .container {
      max-width: 960px;
      margin: 0 auto;
+    
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -465,3 +467,28 @@
 }
  
 
+button.bg-blue-500 {
+  color: azure !important;
+  background-color: #778ccd !important;
+  outline: 0.1px solid #673ab717;
+}
+
+
+button.bg-blue-500:hover {
+  color: azure !important;
+  background-color: #778ccd !important;
+  outline: 0.1px solid #673ab717;
+}
+
+
+button.bg-blue-500:focus {
+  color: azure !important;
+  background-color: #778ccd !important;
+  outline: 0.1px solid #c5090917!important;
+  padding-bottom: 15px!important;
+}
+
+.DG {
+  padding-bottom: 15px!important; 
+
+}
