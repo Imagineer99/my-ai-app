@@ -592,3 +592,10 @@ body {
 h1 {
   color: #a0451a !important;
 }
+@media only screen and (max-width: 600px) {
+  .mb-8 {
+  max-width: 50vw;
+  }
+}
+
+
