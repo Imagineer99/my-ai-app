@@ -216,7 +216,7 @@
 }
  nav .logo {
      font-size: 22px;
-     font-weight: 700;
+     font-weight: 500!important;
      text-transform: uppercase;
      letter-spacing: 1px;
 }
@@ -313,6 +313,7 @@
 }
  .text-lg {
      font-size: 1.525rem;
+     font-weight: 400!important;
 }
  .py-2 {
      margin-right: 20px;
@@ -353,7 +354,7 @@
     /* Adjust the duration and timing function as needed */
 }
  nav {
-     background: linear-gradient( 45deg, rgba(5, 5, 5, 0.966), rgba(51, 51, 51, 0.9) ) !important;
+     background: linear-gradient( 45deg, rgba(19, 18, 18, 0.9), rgba(12, 12, 12, 0.342) ) !important;
      backdrop-filter: blur(5px);
      border-radius: 10px;
      border: 1px solid rgba(255,255,255,0.5);
@@ -390,9 +391,7 @@
  .mx-auto {
      margin: 0 auto;
 }
- .max-w-md {
-     max-width: 768px;
-}
+
  .py-24 {
      padding: 6rem 0;
 }
@@ -422,10 +421,7 @@
      margin-bottom: 2rem;
      outline: 0.1px solid #c927889f;
 }
-/* Responsiveness */
- @media screen and (max-width: 600px) {
-    /* Styles here */
-}
+
  body {
      background: linear-gradient( 45deg, hsl(240, 4%, 10%), hsl(240, 4%, 11%), hsl(240, 4%, 12%) ) !important;
      color: hsl(240, 3%, 63%);
@@ -439,7 +435,15 @@
  @media only screen and (max-width: 600px) {
      .mb-8 {
          width: 10px!important;
+         max-width:  50px!important;
+         width: 1px!important;
+         
+      
     }
+    .fixed.w-full.max-w-md.bottom-0.border.border-gray-300.rounded.mb-8.shadow-xl.p-2 {
+      min-width: 400px !important;
+     }
+
 }
 /* Adjust the margins to reduce space between items */
  nav .container {
@@ -460,3 +464,4 @@
     /* Adjust the value as needed */
 }
  
+
