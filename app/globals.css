@@ -434,7 +434,7 @@
  h1 {
      color: #fd6f00 !important;
 }
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 660px) {
      .mb-8 {
          width: 10px!important;
          max-width:  50px!important;
