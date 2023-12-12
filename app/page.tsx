@@ -14,21 +14,27 @@ export default function Chat() {
       setShowTitle(false);
     }
   };
-
+  <h2> Neural Novel </h2>
   return (
     <div className="mx-auto w-full max-w-md py-24 flex flex-col items-center">
       <h1
-        className={`text-2xl font-bold mb-4 transition-opacity duration-500 ease-in-out ${
-          showTitle ? 'opacity-100' : 'opacity-0'
-        }`}
+        style={{
+          opacity: showTitle ? 1 : 0,
+          transition: 'opacity 0.5s ease-in-out',
+          fontSize: '2rem',
+          fontWeight: 'bold',
+          marginBottom: '1rem',
+        }}
       >
-        Mixtral MoE Chat
+        Mixtral Chat
       </h1>
-
+      
       {messages.map((m) => (
         <div key={m.id}>
-          {m.role === 'user' ? 'User: ' : 'AI: '}
-          {m.content}
+          <span style={{ fontWeight: 'bold' }}>
+            {m.role === 'user' ? 'User: ' : 'Mixtral: '}
+          </span>
+          <span>{m.content}</span>
         </div>
       ))}
 
