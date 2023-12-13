@@ -16,13 +16,17 @@ export async function POST(req: Request) {
   // Ask Fireworks for a streaming chat completion using Llama 2 70b model
   // @see https://app.fireworks.ai/models/fireworks/llama-v2-70b-chat
   const response = await fireworks.chat.completions.create({
-    model: 'accounts/fireworks/models/mixtral-8x7b-fw-chat',
+    model: 'accounts/fireworks/models/llama-v2-7b-chat',
     stream: true,
     max_tokens: 1000,
-    messages,
+        messages: [
+      {
+        "role": "user",
+        "content" : "You are Mixtral, Developed by Mistral.AI"
+      }
+    ],
   });
   // Convert the response into a friendly text-stream.
   const stream = OpenAIStream(response);
   // Respond with the stream
   return new StreamingTextResponse(stream);
-}
