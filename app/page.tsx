@@ -110,7 +110,7 @@ export default function Chat() {
               <h2 className="text-lg font-bold mb-4">User License Agreement</h2>
               <p>
                 By using this website and its components, you agree that it is for testing purposes only.
-                You are not allowed Use this website for any illegal purpose, or in violation of any laws. 
+                You are not allowed to use this website for any illegal purpose, or in violation of any laws. 
                 By using this website you agree to our terms & conditions.
               </p>
               <div className="text-center mt-4">
