@@ -17,18 +17,7 @@ export async function POST(req: Request) {
     model: 'accounts/fireworks/models/mixtral-8x7b-instruct',
     stream: true,
     max_tokens: 1000,
-    messages: [
-      {
-        "role": "system",
-        "content" : "You are Mixtral",
-      },
-      {
-        "role": "user",
-        "content" : "<your message>",
-      },
-     
-    ],
-    
+    messages
   });
   // Convert the response into a friendly text-stream.
   const stream = OpenAIStream(response);
