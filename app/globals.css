@@ -550,6 +550,8 @@ button.bg-blue-500:focus {
   padding-left: 10px;
   padding-right: 10px;
   color: rgba(204, 204, 204, 0.889);
+  overflow-wrap: break-all;
+  word-break: break-all !important; /* Add this line for breaking long words */
 }
 
 .text-blue-500 {
@@ -628,4 +630,57 @@ pre {
 
 .mb-8 {
   backdrop-filter: blur(5px);
+}
+
+.p {
+  width: 50px !important;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  align-self: self-start;
+  background: linear-gradient(to bottom, #353a3a, #485858f3);
+  border-radius: 5px;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgba(204, 204, 204, 0.889);
+  max-width: inherit;
+  word-wrap: break-word; /* Add this line */
+  word-wrap: inherit !important;
+  max-width: inherit !important;
+}
+
+.p {
+  word-wrap: inherit !important;
+  max-width: inherit !important;
+}
+.mb-8 {
+  background: linear-gradient(
+    45deg,
+    rgba(19, 18, 18, 0.9),
+    rgba(12, 12, 12, 0.342)
+  ) !important;
+  backdrop-filter: blur(5px);
+}
+
+.p {
+  width: 50px !important;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  align-self: self-start;
+  background: linear-gradient(to bottom, #353a3a, #485858f3);
+  border-radius: 5px;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgba(204, 204, 204, 0.889);
+  max-width: inherit;
+  overflow-wrap: break-all;
+  word-break: break-all !important; /* Add this line for breaking long words */
+}
+
+.p {
+  word-wrap: inherit !important;
+  max-width: inherit !important;
 }
