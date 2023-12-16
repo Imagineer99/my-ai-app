@@ -466,6 +466,7 @@ a {
 .mb-8:hover {
   margin-bottom: 2rem;
   outline: 0.1px solid #c927889f;
+  padding-bottom: 15px !important;
 }
 
 body {
@@ -557,7 +558,17 @@ button.bg-blue-500:focus {
 .text-blue-500 {
   background-color: none !important;
 }
-
+.mb-8 {
+  background: linear-gradient(
+    45deg,
+    rgba(19, 18, 18, 0.9),
+    rgba(12, 12, 12, 0.342)
+  ) !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+  overflow-wrap: break-word; /* Standard name for the same property */
+}
 pre {
   background-color: black !important;
   padding: 5px !important;
