@@ -462,6 +462,7 @@ a {
 .mb-8 {
   margin-bottom: 2rem;
   color: #bbb !important;
+  height: 35px !important;
 }
 .mb-8:hover {
   margin-bottom: 2rem;
