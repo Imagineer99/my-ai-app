@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 242, 244, 247;
@@ -642,6 +644,7 @@ pre {
 
 .mb-8 {
   backdrop-filter: blur(5px);
+  backdrop-filter: brightness(0.5);
 }
 
 .p {
@@ -701,5 +704,34 @@ body {
 
 /* Apply drop shadow inline to a specific element (e.g., a div with class 'content') */
 .content {
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+body {
+  background-size: cover;
+  /* Additional background properties can be added as needed */
+}
+h1,
+h2 {
+  text-align: center !important;
+
+  text-shadow: 2px 2px 20px rgb(0 0 0) !important;
+}
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  word-break: auto-phrase !important;
+  display: grid;
+  align-self: self-start;
+  background: linear-gradient(180deg, #353a3ac7, #4858587a);
+  border-radius: 10px; /* Adjust the border-radius based on your preference for the glass morphism effect */
+  padding: 1rem; /* Adjust the padding based on your design */
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.06); /* Box shadow for the glass morphism effect */
+}
+
+/* Apply syntax highlighting styles to the pre element */
+pre {
   filter: drop-shadow(2px 4px 6px black);
 }

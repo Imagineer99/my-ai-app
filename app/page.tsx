@@ -1,15 +1,12 @@
 "use client";
-
 import React, { useState } from "react";
 import { useChat } from "ai/react";
 import ReactMarkdown from "react-markdown";
 
-// Navbar component
 const Navbar = () => {
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Make the logo clickable */}
         <a
           href="https://neuralnovel.com"
           className="text-white font-bold text-lg"
@@ -17,9 +14,6 @@ const Navbar = () => {
           Neural Novel
         </a>
 
-        {/* Add additional navigation items as needed */}
-
-        {/* Donate button */}
         <a
           href="https://streamlabs.com/neuralnovels/tip"
           target="_blank"
@@ -33,14 +27,13 @@ const Navbar = () => {
   );
 };
 
-// Chat component
-export default function Chat() {
+const Chat = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   const [showLabel, setShowLabel] = useState(true);
   const [showTitle, setShowTitle] = useState(true);
   const [showULA, setShowULA] = useState(false);
 
-  const handleEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleEnterPress = (e) => {
     if (e.key === "Enter") {
       setShowLabel(false);
       setShowTitle(false);
@@ -57,12 +50,9 @@ export default function Chat() {
 
   return (
     <div>
-      {/* Include the Navbar component */}
       <Navbar />
 
-      {/* Rest of your Chat component */}
       <div className="mx-auto w-full max-w-md py-24 flex flex-col items-center">
-        {/* User License Agreement Link */}
         <a href="#" onClick={handleULAClick} className="DG">
           User License Agreement
         </a>
@@ -79,7 +69,6 @@ export default function Chat() {
           Mixtral Chat
         </h1>
 
-        {/* Messages display */}
         {messages.map((m) => (
           <div key={m.id} className="my-2">
             <span
@@ -88,12 +77,18 @@ export default function Chat() {
             >
               {m.role === "user" ? "User: " : "Mixtral: "}
             </span>
-            <ReactMarkdown>{m.content}</ReactMarkdown>{" "}
-            {/* Render content as Markdown */}
+            {m.isCode ? (
+              <pre>
+                <code className={`language-${m.language || "text"}`}>
+                  {m.content}
+                </code>
+              </pre>
+            ) : (
+              <ReactMarkdown>{m.content}</ReactMarkdown>
+            )}
           </div>
         ))}
 
-        {/* User input form */}
         <form onSubmit={handleSubmit}>
           <label>
             <span
@@ -113,7 +108,6 @@ export default function Chat() {
           <button type="submit">Send</button>
         </form>
 
-        {/* User License Agreement Modal */}
         {showULA && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white p-8 rounded shadow-lg">
@@ -138,4 +132,6 @@ export default function Chat() {
       </div>
     </div>
   );
-}
+};
+
+export default Chat;

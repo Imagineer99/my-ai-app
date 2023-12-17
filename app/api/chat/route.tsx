@@ -17,14 +17,14 @@ export async function POST(req: Request) {
     if (messages.length === 0 || messages[0].role !== "system") {
       messages.unshift({
         role: "system",
-        content: "The following is a conversation with Mixtral MoE.",
+        content: "",
       });
     }
 
     const response = await fireworks.chat.completions.create({
       model: "accounts/fireworks/models/mixtral-8x7b-instruct",
       stream: true,
-      max_tokens: 400,
+      max_tokens: 1000,
       messages,
     });
 
