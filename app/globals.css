@@ -735,3 +735,15 @@ h2 {
 pre {
   filter: drop-shadow(2px 4px 6px black);
 }
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  word-break: auto-phrase !important;
+  display: grid;
+  align-self: self-start;
+  background: linear-gradient(180deg, #353a3a, #485858f3);
+  border-radius: 5px;
+  padding: 10px 10px;
+  color: hsla(0, 0%, 80%, 0.889);
+  overflow-wrap: anywhere !important;
+}
