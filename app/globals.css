@@ -747,3 +747,18 @@ pre {
   color: hsla(0, 0%, 80%, 0.889);
   overflow-wrap: anywhere !important;
 }
+.mb-8 {
+  display: flex;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mb-8 input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+}
