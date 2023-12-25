@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { useChat } from "ai/react";
+import { useChat, Message } from "ai/react";
 import ReactMarkdown from "react-markdown";
 
+// Navbar component
 const Navbar = () => {
   return (
     <nav className="bg-gray-800 p-4">
@@ -27,36 +28,44 @@ const Navbar = () => {
   );
 };
 
+// Chat component
 const Chat = () => {
+  // Use the useChat hook to manage chat state
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   const [showLabel, setShowLabel] = useState(true);
   const [showTitle, setShowTitle] = useState(true);
   const [showULA, setShowULA] = useState(false);
 
-  const handleEnterPress = (e) => {
+  // Handle Enter key press
+  const handleEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       setShowLabel(false);
       setShowTitle(false);
     }
   };
 
+  // Handle click on User License Agreement
   const handleULAClick = () => {
     setShowULA(true);
   };
 
+  // Handle closing User License Agreement
   const handleULAClose = () => {
     setShowULA(false);
   };
 
   return (
     <div>
+      {/* Render Navbar component */}
       <Navbar />
 
       <div className="mx-auto w-full max-w-md py-24 flex flex-col items-center">
+        {/* User License Agreement link */}
         <a href="#" onClick={handleULAClick} className="DG">
           User License Agreement
         </a>
 
+        {/* Chat title */}
         <h1
           style={{
             opacity: showTitle ? 1 : 0,
@@ -69,26 +78,32 @@ const Chat = () => {
           Mixtral Chat
         </h1>
 
-        {messages.map((m) => (
-          <div key={m.id} className="my-2">
-            <span
-              style={{ fontWeight: "bold" }}
-              className={m.role === "user" ? "text-blue-500" : "text-green-500"}
-            >
-              {m.role === "user" ? "User: " : "Mixtral: "}
-            </span>
-            {m.isCode ? (
-              <pre>
-                <code className={`language-${m.language || "text"}`}>
-                  {m.content}
-                </code>
-              </pre>
-            ) : (
-              <ReactMarkdown>{m.content}</ReactMarkdown>
-            )}
-          </div>
-        ))}
+        {/* Render chat messages */}
+        {messages.map(
+          (m: Message & { isCode?: boolean; language?: string }) => (
+            <div key={m.id} className="my-2">
+              <span
+                style={{ fontWeight: "bold" }}
+                className={
+                  m.role === "user" ? "text-blue-500" : "text-green-500"
+                }
+              >
+                {m.role === "user" ? "User: " : "Mixtral: "}
+              </span>
+              {m.isCode ? (
+                <pre>
+                  <code className={`language-${m.language || "text"}`}>
+                    {m.content}
+                  </code>
+                </pre>
+              ) : (
+                <ReactMarkdown>{m.content}</ReactMarkdown>
+              )}
+            </div>
+          ),
+        )}
 
+        {/* Chat input form */}
         <form onSubmit={handleSubmit}>
           <label>
             <span
@@ -108,6 +123,7 @@ const Chat = () => {
           <button type="submit">Send</button>
         </form>
 
+        {/* User License Agreement modal */}
         {showULA && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white p-8 rounded shadow-lg">
@@ -134,4 +150,5 @@ const Chat = () => {
   );
 };
 
+// Export the Chat component
 export default Chat;
