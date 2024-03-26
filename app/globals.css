@@ -483,9 +483,20 @@ body {
 .py-24 {
   margin-bottom: 70px;
 }
-h1 {
-  color: #fd6f00 !important;
+@keyframes hueChange {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
+
+h1 {
+  color: hsl(189, 75%, 45%) !important;
+  animation: hueChange 10s infinite alternate; /* Adjust duration and other properties as needed */
+}
+
 @media only screen and (max-width: 660px) {
   .mb-8 {
     width: 10px !important;
