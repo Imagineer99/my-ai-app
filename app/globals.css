@@ -30,7 +30,12 @@ body {
 label {
   display: block;
   margin-bottom: 0.5rem;
+  color: #353a3a;
 }
+.opacity-100 {
+  color: rgba(5, 5, 5, 0.9);
+}
+
 input {
   width: 100%;
   padding: 0.5rem;
@@ -495,8 +500,8 @@ body {
 h1 {
   color: hsl(189, 75%, 45%) !important;
   animation: hueChange 10s infinite alternate; /* Adjust duration and other properties as needed */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) !important; /* Adjust values for shadow offset, blur, and color as needed */
 }
-
 @media only screen and (max-width: 660px) {
   .mb-8 {
     width: 10px !important;
@@ -552,6 +557,7 @@ button.bg-blue-500:focus {
 
 .DG {
   padding-bottom: 15px !important;
+  color: rgba(5, 5, 5, 0.9);
 }
 .my-2 {
   margin-top: 0.5rem;
@@ -703,12 +709,7 @@ pre {
 
 /* Your existing CSS code */
 body {
-  background: linear-gradient(
-    45deg,
-    hsl(240, 4%, 10%),
-    hsl(240, 4%, 11%),
-    hsl(240, 4%, 12%)
-  ) !important;
+  background-image: url("https://i.ibb.co/93XfbYq/magnific-v-XMNzb9xorkw3-Gv-At-OGK-OIG-2.jpg") !important; /* Replace 'your-image-url.jpg' with the URL or path to your image */
   color: hsl(240, 3%, 63%);
 }
 
