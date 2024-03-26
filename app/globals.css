@@ -709,19 +709,21 @@ pre {
 
 /* Your existing CSS code */
 body {
-  background-image: url("https://i.ibb.co/93XfbYq/magnific-v-XMNzb9xorkw3-Gv-At-OGK-OIG-2.jpg") !important; /* Replace 'your-image-url.jpg' with the URL or path to your image */
-  color: hsl(240, 3%, 63%);
+  background-image: url("https://i.ibb.co/93XfbYq/magnific-v-XMNzb9xorkw3-Gv-At-OGK-OIG-2.jpg") !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  color: hsl(240, 3%, 63%) !important;
 }
+
+/* Optional: Adjust other styles as needed */
 
 /* Apply drop shadow inline to a specific element (e.g., a div with class 'content') */
 .content {
   filter: drop-shadow(2px 4px 6px black);
 }
 
-body {
-  background-size: cover;
-  /* Additional background properties can be added as needed */
-}
 h1,
 h2 {
   text-align: center !important;
