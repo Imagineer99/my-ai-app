@@ -30,7 +30,7 @@ export async function POST(req: Request) {
     const response = await fireworks.chat.completions.create({
       model: "accounts/fireworks/models/mixtral-8x7b-instruct",
       stream: true,
-      max_tokens: 1001,
+      max_tokens: 2000,
       messages,
     });
 
