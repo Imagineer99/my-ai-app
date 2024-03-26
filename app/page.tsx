@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useChat, Message } from "ai/react";
 import ReactMarkdown from "react-markdown";
 
@@ -53,6 +53,20 @@ const Chat = () => {
   const handleULAClose = () => {
     setShowULA(false);
   };
+
+  // Parallax scroll effect for my-2 class
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll<HTMLElement>(".my-2");
+      elements.forEach((element) => {
+        const scrollY = window.pageYOffset;
+        element.style.transform = `translateY(${scrollY * -0.2}px)`;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div>
