@@ -75,7 +75,7 @@ const Chat = () => {
             marginBottom: "1rem",
           }}
         >
-          What's on your mind?
+          Mixtral Chat
         </h1>
 
         {/* Render chat messages */}
