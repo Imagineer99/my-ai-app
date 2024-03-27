@@ -102,7 +102,7 @@ const Chat = () => {
                   m.role === "user" ? "text-blue-500" : "text-green-500"
                 }
               >
-                {m.role === "user" ? "User: " : "Mixtral: "}
+                {m.role === "user" ? "User: " : "Astra: "}
               </span>
               {m.isCode ? (
                 <pre>
