@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Neural Novel',
-  description: 'Mixtral Chat UI By Neural Novel',
+  description: 'Astra Chat UI By Neural Novel',
 }
 
 export default function RootLayout({
