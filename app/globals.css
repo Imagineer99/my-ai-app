@@ -573,8 +573,7 @@ body {
 }
 
 h1 {
-  color: hsl(189, 75%, 45%) !important;
-  animation: hueChange 10s infinite alternate;
+  color: hsl(0, 0%, 0%) !important;
   /* Adjust duration and other properties as needed */
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) !important;
   /* Adjust values for shadow offset, blur, and color as needed */
